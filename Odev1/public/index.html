@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ödev1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="odev.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script  type="text/javascript" src="javascripts/scripts.js"></script>
+</head>
+<body>
+<div class="card" id="tab">
+    <div class="card-header">
+        Ders Programı
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tr class="table-primary">
+                <th scope="col">Sıra No</th>
+                <th scope="col">Ders Kodu</th>
+                <th scope="col">Ders Adı</th>
+            </tr>
+            <tr class="table-success">
+                <th scope="row">0</th>
+                <td>BSM 103</td>
+                <td>Programlamaya Giriş</td>
+            </tr>
+            <tr class="table-danger">
+                <th scope="row">1</th>
+                <td>BSM 201</td>
+                <td>Elektrik Devre Temelleri</td>
+            </tr>
+            <tr class="table-warning" >
+                <td scope="row" onclick="ajaxDrop()">2</td>
+                <td id="derskod" onclick="ajaxDrop()">BSM 205</td>
+                <td id="ad" onclick="ajaxDrop()">Web Programlama</td>
+            </tr>
+            <tr class="bg-info">
+                <th scope="row">3</th>
+                <td>BSM 309</td>
+                <td>İşletim Sistemleri</td>
+            </tr>
+            <tr class="bg-danger">
+                <td scope="row">4</td>
+                <td scope="row">BSM 459</td>
+                <td scope="row">Ağ Programlama</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="drop">
+            <div class="input-group mb-3" id="inpt">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Dersin Kodu</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="kodu" onkeyup="keyUPcode()">
+            </div>
+            <div class="input-group mb-3" id="inpt">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Dersin Adı</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="isim" onkeyup="keyUPname()">
+            </div>
+            <div class="input-group mb-3" id="inpt">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Dersin İçeriği</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="icerik" onkeyup="keyUPcontent()">
+            </div>
+            <button type="button" class="btn btn-info btn-lg" id="btn" onclick="showJSON()">Json Göster</button>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id="btn1" onclick="showXML()">XML Göster</button>
+             <br>
+             <p>Kodlanmış Veri</p>
+            <textarea id="kodlanmisVeri"></textarea>
+    </div>
+</body>
+</html>

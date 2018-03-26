@@ -1,0 +1,30 @@
+#tab{
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+#inpt{
+    width: 570px;
+    margin-left: 30px;
+}
+#btn{
+    width: 150px;
+    margin-left: 450px;
+}
+#btn1{
+    width: 150px;
+    margin-left: 6px;
+}
+#drop{
+    display: none;
+}
+#kodlanmisVeri{
+    margin-left: 30px;
+    width: 780px;
+    height: 300px;
+}
+p{
+    margin-left: 30px;
+}
